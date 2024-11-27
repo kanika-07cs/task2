@@ -15,11 +15,11 @@
         <button id=star>5Star</button>
         <button id="munch">Munch</button>
     <form id="coin" class="coin">
-        <button>Ones</button><input type="number" name="oneCoin" id="oneCoin" min="1" max="50" value="0" oninput="tally()">
-        <button>Twos</button><input type="number" name="twoCoin" id="twoCoin" min="1" max="50" value="0" oninput="tally()">
+        <button>Ones</button><input type="number" name="oneCoin" id="oneCoin" min="1" max="50" value="0" oninput="tally()"><br>
+        <button>Twos</button><input type="number" name="twoCoin" id="twoCoin" min="1" max="50" value="0" oninput="tally()"><br>
         <button>Fives</button><input type="number" name="fiveCoin" id="fiveCoin" min="1" max="50" value="0" oninput="tally()">
     </form>
-    <button id="cancel">Cancel</button>
+    <button id="cancel" onclick="clearAll()">Cancel</button>
     <h4>Amount entered:$<span id="amt">0.00</span></h4>
     <script src="script.js"></script>
 </body>

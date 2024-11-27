@@ -7,3 +7,9 @@ h1{
     font-weight: bold;
     text-align: center;
 }
+.coin{
+    border: 3px dotted cornflowerblue;
+    padding: 15px;
+    margin: 20px;
+    box-sizing: content-box;
+}

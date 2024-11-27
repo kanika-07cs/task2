@@ -26,3 +26,21 @@ function tally(){
     insertedMoney=total();
     document.getElementById('amt').innerHTML=insertedMoney;
 }
+function cancelTally(){
+    insertedMoney=0;
+    document.getElementById('amt').innerHTML=insertedMoney;
+}
+function clearAmt(){
+    document.getElementById('oneCoin').value=0;
+    document.getElementById('twoCoin').value=0;
+    document.getElementById('fiveCoin').value=0;
+}
+function clearAll(){
+    total(){
+        if(paidAmt==0){
+            msg="First,insert money!!"
+        }
+    }
+    clearAmt();
+    cancelTally();
+}
