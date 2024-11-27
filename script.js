@@ -22,4 +22,7 @@ function total(){
     paidAmt=coinOnes+coinTwos+coinFives;
     return paidAmt.toFixed(2);
 }
-console.log(total());
+function tally(){
+    insertedMoney=total();
+    document.getElementById('amt').innerHTML=insertedMoney;
+}
