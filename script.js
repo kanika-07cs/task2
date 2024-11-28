@@ -36,6 +36,11 @@ function clearAmt(){
     document.getElementById('fiveCoin').value=0;
 }
 function clearAll(){
+    total(){
+        if(paidAmt==0){
+            msg=Insert money first!!;
+        }
+    }
     clearAmt();
     cancelTally();
 }
