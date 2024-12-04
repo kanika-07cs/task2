@@ -7,9 +7,27 @@ h1{
     font-weight: bold;
     text-align: center;
 }
-.coin{
-    border: 3px dotted cornflowerblue;
-    padding: 15px;
-    margin: 20px;
-    box-sizing: content-box;
+h4{
+    font-size: 27px;
+    text-align: center;
+}
+#items{
+    border: 5px double rgb(31, 169, 31);
+    background-color: rgb(97, 22, 10);
+    padding: 10px;
+    width: 43%;
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    gap: 10px;
+}
+#items button{
+    background-color: whitesmoke;
+    border-radius: 3px;
+    border-style: none;
+}
+#items button input{
+    width: 20%;
+}
+.output{
+    float: right;
 }

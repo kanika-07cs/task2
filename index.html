@@ -8,29 +8,44 @@
 </head>
 <body>
     <h1>Vending Machine</h1>
-        <button id="kitkat"><img src="kitkat.jpg" width="80px" height="70px"><br>KitKat<br>Rs:25</button>
-        <button id="lays"><img src="lays.jpg" width="80px" height="70px"><br>Lays<br>Rs:5</button>
-        <button id="snickers"><img src="snikers.jpg" width="80px" height="70px"><br>Snickers<br>Rs:30</button>
-        <button id="chomilkshake"><img src="cavins-milkshake-cho.jpg" width="80px" height="70px"><br>Chocolate Milkshake<br>Rs:20</button>
-        <button id="milkybar"><img src="milkybar.webp" width="80px" height="70px"><br>MilkyBar<br>Rs:20</button>
-        <button id="kurkure"><img src="kurkure-masala.webp" width="80px" height="70px"><br>KurKure<br>Rs:10</button>
-        <button id="diarymilk"><img src="Dairy-Milk.webp" width="80px" height="70px"><br>DairyMilk<br>Rs:20</button>
-        <button id="littlehearts"><img src="little-hearts.webp" width="80px" height="70px"><br>Little Hearts<br>Rs:25</button>
-        <button id="vanmilkshake"><img src="cavins-milkshake-van.jpg" width="80px" height="70px"><br>Vanilla Milkshake<br>Rs:20</button>
-        <button id=star><img src="cadbury-5-star-chocolate.jpg" width="80px" height="70px"><br>5Star<br>Rs:10</button>
-        <button id="sprite"><img src="Sprite_Soft_Drink_Tin.jpg" width="80px" height="70px"><br>Sprite<br>Rs:25</button>
-        <button id="munch"><img src="nestle-munch-chocolate.webp" width="80px" height="70px"><br>Munch<br>Rs:20</button>
-        <button id="pringles"><img src="pringles.jpg" width="80px" height="70px"><br>Pringles<br>Rs:5</button>
-        <button id="stmilkshake"><img src="cavins-milkshake-str.jpg" width="80px"height="70px"><br>Strawberry Milkshake<br>Rs:20</button>
-        <button id="cocacola"><img src="cocacola.webp" width="80px" height="70px"><br>CocaCola<br>Rs:25</button>
-    <form id="coin" class="coin">
-        <button>Ones</button><input type="number" name="oneCoin" id="oneCoin" min="1" max="50" value="0" oninput="tally()"><br>
-        <button>Twos</button><input type="number" name="twoCoin" id="twoCoin" min="1" max="50" value="0" oninput="tally()"><br>
-        <button>Fives</button><input type="number" name="fiveCoin" id="fiveCoin" min="1" max="50" value="0" oninput="tally()">
-    </form>
-    <button id="cancel" onclick="clearAll()">Cancel</button>
-    <h4>Amount entered:$<span id="amt">0.00</span></h4>
-    <h4></h4>
+    <h4>Pick out your Favourite!!</h4>
+    <div id="items">
+        <button id="kitkat"><img src="kitkat.jpg" width="80px" height="70px"><br>KitKat<br>Rs:25<br><input type="number" min="0" value="0" data-price="25" data-name="KitKat" data-image="kitkat.jpg"></button>
+
+        <button id="lays"><img src="lays.jpg" width="80px" height="70px"><br>Lays<br>Rs:5<br><input type="number" min="0" value="0" data-price="5" data-name="Lays" data-image="lays.jpg"></button>
+
+        <button id="snickers"><img src="snikers.jpg" width="80px" height="70px"><br>Snickers<br>Rs:30<br><input type="number" min="0" value="0" data-price="30" data-name="Snickers" data-image="snikers.jpg"></button>
+
+        <button id="chomilkshake"><img src="cavins-milkshake-cho.jpg" width="80px" height="70px"><br>Chocolate Milkshake<br>Rs:20<br><input type="number" min="0" data-price="20" value="0" data-name="Chocolate Milkshake" data-image="cavins-milkshake-cho.jpg"></button>
+
+        <button id="milkybar"><img src="milkybar.webp" width="80px" height="70px"><br>MilkyBar<br>Rs:20<br><input type="number" min="0" data-price="20" value="0" data-name="MilkyBar" data-image="milkybar.webp"></button>
+
+        <button id="kurkure"><img src="kurkure-masala.webp" width="80px" height="70px"><br>KurKure<br>Rs:10<br><input type="number" min="0" data-price="10" value="0" data-name="KurKure" data-image="kurkure-masala.webp"></button>
+
+        <button id="diarymilk"><img src="Dairy-Milk.webp" width="80px" height="70px"><br>DairyMilk<br>Rs:20<br><input type="number" min="0" data-price="20" value="0" data-name="DairyMilk" data-image="Dairy-Milk.webp"></button>
+
+        <button id="littlehearts"><img src="little-hearts.webp" width="80px" height="70px"><br>Little Hearts<br>Rs:25<br><input type="number" min="0" value="0" data-price="25" data-name="Little Hearts" data-image="little-hearts.webp"></button>
+
+        <button id="vanmilkshake"><img src="cavins-milkshake-van.jpg" width="80px" height="70px"><br>Vanilla Milkshake<br>Rs:20<br><input type="number" min="0" value="0" data-price="20" data-name="Vanilla Milkshake" data-image="cavins-milkshake-van.jpg"></button>
+
+        <button id=star><img src="cadbury-5-star-chocolate.jpg" width="80px" height="70px"><br>5Star<br>Rs:10<br><input type="number" min="0" value="0" data-price="10" data-name="5Star" data-image="cadbury-5-star-chocolate.jpg"></button>
+
+        <button id="sprite"><img src="Sprite_Soft_Drink_Tin.jpg" width="80px" height="70px"><br>Sprite<br>Rs:25<br><input type="number" min="0" value="0" data-price="25" data-name="Sprite" data-image="Sprite_Soft_Drink_Tin.jpg"></button>
+
+        <button id="munch"><img src="nestle-munch-chocolate.webp" width="80px" height="70px"><br>Munch<br>Rs:20<br><input type="number" min="0" value="0" data-price="20" data-name="Munch" data-image="nestle-munch-chocolate.webp"></button>
+
+        <button id="pringles"><img src="pringles.jpg" width="80px" height="70px"><br>Pringles<br>Rs:30<br><input type="number" min="0" value="0"data-price="30" data-name="Pringles" data-image="pringles.jpg"></button>
+
+        <button id="stmilkshake"><img src="cavins-milkshake-str.jpg" width="80px"height="70px"><br>Strawberry Milkshake<br>Rs:20<br><input type="number" min="0" value="0" data-price="20" data-name="Strawberry Milkshake" data-image="cavins-milkshake-str.jpg"></button>
+
+        <button id="cocacola"><img src="cocacola.webp" width="80px" height="70px"><br>CocaCola<br>Rs:25<br><input type="number" min="0" value="0"data-price="25" data-name="CocaCola" data-image="cocacola.webp"></button>
+    </div>
+    <div class="output">
+        <h3>Your selected products</h3>
+        <div id="selectedProducts"></div>
+        <button onclick="calcTotal()">Calculate Total</button>
+        <h5 class="total">Total cost : Rs <span id="totalCost">0</span></h5>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
