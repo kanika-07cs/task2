@@ -15,8 +15,7 @@ function calcTotal(){
             const addedProduct=document.createElement('newOne');
             addedProduct.classList.add('product-added');
             addedProduct.innerHTML=`<img src="${image}" width="50px">
-            <span>${name}</span>
-            <span>Qty:${qty}  Cost:${price*qty}</span><br>`;
+            <span>${name} Qty:${qty} Cost:${price*qty}</span><br>`;
 
             productSelected.appendChild(addedProduct);
         }
@@ -25,4 +24,25 @@ function calcTotal(){
 
     const selectedPayment=document.querySelector('input[name="methodPay"]:checked').value;
     document.getElementById('payOption').innerText=selectedPayment;
+
+    if(total>0){
+        paymentProcessing();
+    }
+}
+
+function paymentProcessing(){
+    const paymentStatus=document.getElementById('payStatus');
+    paymentStatus.innerText='Payment Processing...';
+
+    setTimeout(()=>{
+        const success=Math.random()>0.2;
+        if (success){
+            paymentStatus.innerText='Payment successful! Have a good snacks';
+            paymentStatus.style.color='green';
+        }
+        else{
+            paymentStatus.innerText='Payment Failed.Please try again!';
+            paymentStatus.style.color='red';
+        }
+    },3000);
 }
