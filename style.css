@@ -1,12 +1,14 @@
 *{
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url("vibrant2.gif");
     color: whitesmoke;
+    font-size: 25px;
+    font-family: charm;
+}
+body{
+    background-image: url("vibrant2.gif");
 }
 h1{
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: bolder;
     text-align: center;
 }
 .container{
@@ -30,21 +32,31 @@ h4{
 }
 #items button{
     background-image: none;
-    background-color: rgb(36, 37, 37);
+    background-color: rgb(224, 228, 228);
     border-radius: 3px;
     border-style: none;
+    color: black;
 }
 #items button input{
     width: 20%;
     padding: 5px;
     background-image: none;
-    background-color: rgb(36, 37, 37);
+    background-color: rgb(171, 172, 172);
+    color: black;
 }
 .payment{
     padding-right: 70px;
     border-style: none;
     box-shadow: 4px 5px 2px ;
     margin: 15px;
+}
+.payment button{
+    color: black;
+    background-color: beige;
+}
+.payment button:hover{
+    color: blueviolet;
+    background-color: rgb(154, 237, 237);
 }
 .output{
     padding-right: 100px;
