@@ -16,8 +16,7 @@ function calcTotal(){
             addedProduct.classList.add('product-added');
             addedProduct.innerHTML=`<img src="${image}" width="50px">
             <span>${name}</span>
-            <span>Quantity:${qty}  Cost:${price*qty}</span>
-            `;
+            <span>Qty:${qty}  Cost:${price*qty}</span><br>`;
 
             productSelected.appendChild(addedProduct);
         }
