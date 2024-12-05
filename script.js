@@ -22,4 +22,7 @@ function calcTotal(){
         }
     });
     document.getElementById('totalCost').innerText=total;
+
+    const selectedPayment=document.querySelector('input[name="methodPay"]:checked').value;
+    document.getElementById('payOption').innerText=selectedPayment;
 }

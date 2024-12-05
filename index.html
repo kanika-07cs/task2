@@ -41,11 +41,17 @@
 
         <button id="cocacola"><img src="cocacola.webp" width="80px" height="70px"><br>CocaCola<br>Rs:25<br><input type="number" min="0" value="0"data-price="25" data-name="CocaCola" data-image="cocacola.webp"></button>
     </div>
+    <div class="payment">
+        <h3>Payments Mode</h3>
+        <label><input type="radio" name="methodPay" value="Coin">Coins</label><br>
+        <label><input type="radio" name="methodPay" value="GPay" checked>GPay</label><br>
+        <button onclick="calcTotal()">Calculate Total</button>
+        <h5 class="pay">Method of Payment:<span id="payOption">cash</span></h5>
+        <h5 class="total">Total cost : Rs <span id="totalCost">0</span></h5>
+    </div>
     <div class="output">
         <h3>Your selected products</h3>
         <div id="selectedProducts"></div>
-        <button onclick="calcTotal()">Calculate Total</button>
-        <h5 class="total">Total cost : Rs <span id="totalCost">0</span></h5>
     </div>
 </div>
     <script src="script.js"></script>
