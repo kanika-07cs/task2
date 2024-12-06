@@ -1,3 +1,4 @@
+let discountAmt=0;
 function calcTotal(){
     let total=0;
     const productSelected=document.getElementById('selectedProducts');
@@ -20,14 +21,43 @@ function calcTotal(){
             productSelected.appendChild(addedProduct);
         }
     });
-    document.getElementById('totalCost').innerText=total;
 
+    const withoutDiscount=total;
+    total-=discountAmt;
+
+    document.getElementById('totalCost').innerText=`Total Cost before discount:${withoutDiscount.toFixed(2)}`;
+    document.getElementById('discount').innerText=`Discount applied:${discountAmt.toFixed(2)}`;
+    document.getElementById('totalCost').innerText=`Total cost after discount:${total.toFixed(2)}`;
+    
     const selectedPayment=document.querySelector('input[name="methodPay"]:checked').value;
     document.getElementById('payOption').innerText=selectedPayment;
 
     if(total>0){
         paymentProcessing();
     }
+}
+
+function discountapply(){
+    const discountCode=document.getElementById('disCode').value;
+    discountAmt=0;
+    if(discountCode==='BIT24'){
+        discountAmt=0.3*totalAmt();
+    }
+    else{
+        alert('Invalid Discount Code');
+    }
+    calcTotal();
+}
+
+function totalAmt(){
+    let total=0;
+    const content = document.querySelectorAll('#items input[type="number"]');
+    content.forEach(input => {
+        const qty = parseInt(input.value, 10) || 0;
+        const price = parseInt(input.dataset.price, 10);
+        total += qty * price;
+    });
+    return total;
 }
 
 function paymentProcessing(){
@@ -37,7 +67,7 @@ function paymentProcessing(){
     setTimeout(()=>{
         const success=Math.random()>0.2;
         if (success){
-            paymentStatus.innerText='Payment successful! Have a good snacks';
+            paymentStatus.innerText='Payment successful!<br>Enjoy your snacks';
             paymentStatus.style.color='green';
         }
         else{

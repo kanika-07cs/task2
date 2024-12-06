@@ -46,9 +46,15 @@
         <h3>Payments Mode</h3>
         <label><input type="radio" name="methodPay" value="Coin" checked>Coins</label><br>
         <label><input type="radio" name="methodPay" value="GPay">GPay</label><br>
-        <button onclick="calcTotal()">Calculate Total</button>
-        <h5 class="total">Total cost : Rs <span id="totalCost">0</span></h5>
-        <h5 class="pay">Method of Payment:<span id="payOption">Cash</span></h5>
+
+        <button onclick="calcTotal()">Calculate Total</button><br>
+
+        <button onclick="discountapply()">Prevail Discount</button>
+        <input type="text" id="disCode" placeholder="Your discount-code">
+        
+        <h5 class="pay">Method of Payment:<span id="payOption">Cash </span></h5>
+        <h5 id="discount"></h5>
+        <h5 id="totalCost"></h5>
         <h5 id="payStatus"></h5>
     </div>
     <div class="output">
