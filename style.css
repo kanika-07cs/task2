@@ -4,10 +4,11 @@
     font-family: charm;
 }
 body{
-    background-image: url("vibrant2.gif");
+    background-image: url("snow.gif");
 }
 h1{
     font-size: 40px;
+    line-height: 2px;
     font-weight: bolder;
     text-align: center;
 }
@@ -17,6 +18,8 @@ h1{
     align-items: flex-start;
 }
 h4{
+    padding-top: 5px;
+    line-height: 2px;
     font-size: 27px;
     text-align: center;
 }
@@ -25,9 +28,9 @@ h4{
     background-image: none;
     background-color: rgb(97, 22, 10);
     padding: 10px;
-    width: 43%;
+    width: 47%;
     display: grid;
-    grid-template-columns: repeat(3,200px);
+    grid-template-columns: repeat(3,230px);
     gap: 10px;
 }
 #items button{
@@ -53,10 +56,15 @@ h4{
 .payment button{
     color: black;
     background-color: beige;
+    border-radius: 8px;
+    border-style: none;
 }
 .payment button:hover{
     color: blueviolet;
     background-color: rgb(154, 237, 237);
+}
+h5{
+    line-height: 2px;
 }
 .output{
     padding-right: 100px;

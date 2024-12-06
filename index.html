@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>vending machine</title>
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -44,11 +44,11 @@
     </div>
     <div class="payment">
         <h3>Payments Mode</h3>
-        <label><input type="radio" name="methodPay" value="Coin">Coins</label><br>
-        <label><input type="radio" name="methodPay" value="GPay" checked>GPay</label><br>
+        <label><input type="radio" name="methodPay" value="Coin" checked>Coins</label><br>
+        <label><input type="radio" name="methodPay" value="GPay">GPay</label><br>
         <button onclick="calcTotal()">Calculate Total</button>
         <h5 class="total">Total cost : Rs <span id="totalCost">0</span></h5>
-        <h5 class="pay">Method of Payment:<span id="payOption">cash</span></h5>
+        <h5 class="pay">Method of Payment:<span id="payOption">Cash</span></h5>
         <h5 id="payStatus"></h5>
     </div>
     <div class="output">
