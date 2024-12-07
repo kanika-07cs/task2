@@ -22,16 +22,13 @@ function calcTotal(){
         }
     });
 
-    const withoutDiscount=total;
-    total-=discountAmt;
-
-    document.getElementById('totalCost').innerText=`Total Cost before discount:${withoutDiscount.toFixed(2)}`;
-    document.getElementById('discount').innerText=`Discount applied:${discountAmt.toFixed(2)}`;
-    document.getElementById('totalCost').innerText=`Total cost after discount:${total.toFixed(2)}`;
+    document.getElementById('totalCost').innerText=`Total Cost:Rs.${total.toFixed(2)}`;
+    document.getElementById('discount').innerText=' ';
     
     const selectedPayment=document.querySelector('input[name="methodPay"]:checked').value;
     document.getElementById('payOption').innerText=selectedPayment;
 
+    discountAmt=0;
     if(total>0){
         paymentProcessing();
     }
@@ -39,14 +36,22 @@ function calcTotal(){
 
 function discountapply(){
     const discountCode=document.getElementById('disCode').value;
+    let total = totalAmt();
     discountAmt=0;
     if(discountCode==='BIT24'){
-        discountAmt=0.3*totalAmt();
+        discountAmt=0.3*total;
     }
     else{
         alert('Invalid Discount Code');
+        return;
     }
-    calcTotal();
+
+    const totalAfterDiscount = total - discountAmt;
+    document.getElementById('discount').innerText=`Discount applied:Rs.${discountAmt.toFixed(2)}`;
+    document.getElementById('totalCost').innerText=`Total cost after discount:Rs.${totalAfterDiscount.toFixed(2)}`;
+
+    const selectedPayment = document.querySelector('input[name="methodPay"]:checked').value;
+    document.getElementById('payOption').innerText = selectedPayment;
 }
 
 function totalAmt(){
@@ -67,7 +72,7 @@ function paymentProcessing(){
     setTimeout(()=>{
         const success=Math.random()>0.2;
         if (success){
-            paymentStatus.innerText='Payment successful!<br>Enjoy your snacks';
+            paymentStatus.innerText='Payment successful!Enjoy your snacks';
             paymentStatus.style.color='green';
         }
         else{
