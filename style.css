@@ -83,6 +83,7 @@ h5{
     box-shadow: 5px 5px 2px rgb(226, 225, 225);
 }
 
+
 @media screen and ((width>200px)and (width<900px)){
     body {
       background-size: cover;
@@ -113,18 +114,18 @@ h5{
       box-shadow: 3px 3px 1px; 
     }
     .payment input {
-      width: 74%; 
+      width: 45%; 
     }
     .payment button {
       margin: 3px;
     }
     #qrCode {
-      display: block; 
-      margin: 4px auto;
+      display: none; 
+      margin: 4px;
     }
     .output {
       padding-right: 20px;
-      margin: 10px auto;
+      margin: 10px;
       box-shadow: 3px 3px 1px; 
     }
     h4 {
