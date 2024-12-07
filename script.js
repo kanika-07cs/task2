@@ -28,6 +28,14 @@ function calcTotal(){
     const selectedPayment=document.querySelector('input[name="methodPay"]:checked').value;
     document.getElementById('payOption').innerText=selectedPayment;
 
+    const qrcodeScan=document.getElementById('qrCode');
+    if(selectedPayment==='GPay'){
+        qrcodeScan.style.display='block';
+    }
+    else{
+        qrcodeScan.style.display='none';
+    }
+
     discountAmt=0;
     if(total>0){
         paymentProcessing();
