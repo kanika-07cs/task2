@@ -50,10 +50,11 @@ h4{
     color: black;
 }
 .payment{
-    padding-right: 70px;
+    padding-right: 10px;
+    width: 28%;
     border-style: none;
     box-shadow: 4px 5px 2px ;
-    margin: 15px;
+    margin: 10px;
 }
 .payment button{
     color: black;
@@ -63,7 +64,7 @@ h4{
     margin: 5px;
 }
 .payment input{
-    width: 40%;
+    width: 35%;
     color: black;
 }
 .payment button:hover{
@@ -78,7 +79,58 @@ h5{
     text-align: center;
 }
 .output{
-    padding-right: 100px;
     border: 3px solid rgb(226, 225, 225);
     box-shadow: 5px 5px 2px rgb(226, 225, 225);
 }
+
+@media screen and ((width>200px)and (width<900px)){
+    body {
+      background-size: cover;
+    }
+    h1 {
+      font-size: 25px;
+      line-height: 1px;
+    }
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #items {
+      width: 50%;
+      grid-template-columns: repeat(2, 140px);
+      gap: 5px;
+    }
+    #items button {
+      width: 100%;
+      padding: 8px;
+    }
+    #items button input {
+      width: 45%;
+    }
+    .payment {
+      width: 120%; 
+      margin: 10px;
+      box-shadow: 3px 3px 1px; 
+    }
+    .payment input {
+      width: 74%; 
+    }
+    .payment button {
+      margin: 3px;
+    }
+    #qrCode {
+      display: block; 
+      margin: 4px auto;
+    }
+    .output {
+      padding-right: 20px;
+      margin: 10px auto;
+      box-shadow: 3px 3px 1px; 
+    }
+    h4 {
+      font-size: 15px;
+    }
+    h5 {
+      font-size: 15px;
+    }
+  }
