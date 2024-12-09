@@ -116,7 +116,7 @@ function paymentProcessing(){
     setTimeout(()=>{
         const success=Math.random()>0.2;
         if (success){
-            paymentStatus.innerText='Payment successful!Enjoy your snacks';
+            paymentStatus.innerText='Payment successful!';
             paymentStatus.style.color='green';
         }
         else{
