@@ -1,3 +1,26 @@
+const stock={
+    KitKat:10,
+    Lays:10,
+    Snickers:10,
+    ChocolateMilkshake:10,
+    MilkyBar:10,
+    KurKure:10,
+    DairyMilk:10,
+    LittleHearts:10,
+    VanillaMilkshake:10,
+    Star:10,
+    Sprite:10,
+    Munch:10,
+    Pringles:10,
+    StrawberryMilkshake:10,
+    CocaCola:10,
+};
+
+function updateStockDisplay(product) {
+    const stockElement = document.querySelector(`[data-stock-for="${product}"]`);
+    stockElement.innerText = `Stock: ${stock[product]}`;
+}
+
 let discountAmt=0;
 function calcTotal(){
     let total=0;
@@ -12,7 +35,14 @@ function calcTotal(){
         const price=parseInt(input.dataset.price,10);
 
         if(qty>0){
+            if(qty>stock[name]){
+                alert(`Not enough stock for ${name}.Total availability of stock: ${stock[name]}`);
+                input.value=stock[name];
+            }
+            else{
             total+=qty*price;
+            stock[name]-=qty;
+            updateStockDisplay(name);
             const addedProduct=document.createElement('newOne');
             addedProduct.classList.add('product-added');
             addedProduct.innerHTML=`<img src="${image}" width="50px">
@@ -20,6 +50,12 @@ function calcTotal(){
 
             productSelected.appendChild(addedProduct);
         }
+    }
+    if (stock[name]===0){
+        input.disabled=true;
+        input.value=' ';
+        alert(`${name} is out of stock`);
+    }
     });
 
     document.getElementById('totalCost').innerText=`Total Cost:Rs.${total.toFixed(2)}`;
