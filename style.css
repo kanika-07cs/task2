@@ -40,6 +40,7 @@ h4{
     border-radius: 3px;
     border-style: none;
     color: black;
+    padding :8px;
 }
 #items button:hover{
   transform: translateY(-15px);
